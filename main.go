@@ -36,7 +36,7 @@ func login(c echo.Context) error {
 
 	// Set custom claims
 	claims := &jwtCustomClaims{
-		"Jon Snow",
+		username,
 		true,
 		jwt.RegisteredClaims{
 			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Second * 60)),
